@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-09T19:29:12.946167" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes" source="c:\Users\user-01\Documents\CursoRobotBasico\WebTesting\amazon_testes.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="8">
+<kw name="Abrir o navegador" type="SETUP">
+<msg time="2025-04-09T19:29:13.031308" level="FAIL">No keyword with name 'Abrir o navegador' found.</msg>
+<status status="FAIL" start="2025-04-09T19:29:13.030971" elapsed="0.004157">No keyword with name 'Abrir o navegador' found.</status>
+</kw>
+<kw name="Fechar o navegador" type="TEARDOWN">
+<msg time="2025-04-09T19:29:13.037954" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
+<status status="FAIL" start="2025-04-09T19:29:13.037648" elapsed="0.000655">No keyword with name 'Fechar o navegador' found.</status>
+</kw>
+<doc>Esse teste verifica o menu Eletrônicos do site da amazon.com.br
+e everifica a categoria Computadores e Informática</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="FAIL" start="2025-04-09T19:29:13.026255" elapsed="0.016219">Setup failed:
+No keyword with name 'Abrir o navegador' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o navegador' found.</status>
+</test>
+<doc>Essa suite teste o site da amazon.com.Busca_produtos</doc>
+<status status="FAIL" start="2025-04-09T19:29:12.955176" elapsed="0.095208"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">menus</stat>
+</tag>
+<suite>
+<stat name="Amazon Testes" id="s1" pass="0" fail="1" skip="0">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
