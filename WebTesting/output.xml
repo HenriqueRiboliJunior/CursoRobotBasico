@@ -1,38 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-09T19:29:12.946167" rpa="false" schemaversion="5">
-<suite id="s1" name="Amazon Testes" source="c:\Users\user-01\Documents\CursoRobotBasico\WebTesting\amazon_testes.robot">
-<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="8">
-<kw name="Abrir o navegador" type="SETUP">
-<msg time="2025-04-09T19:29:13.031308" level="FAIL">No keyword with name 'Abrir o navegador' found.</msg>
-<status status="FAIL" start="2025-04-09T19:29:13.030971" elapsed="0.004157">No keyword with name 'Abrir o navegador' found.</status>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-10T10:17:43.646949" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes" source="C:\Users\user-01\Documents\CursoRobotBasico\WebTesting\amazon_testes.robot">
+<test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="10">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-10T10:17:44.026058" level="INFO">Opening browser 'firefox' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>https://www.amazon.com.br/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-10T10:17:44.025825" elapsed="8.722514"/>
 </kw>
-<kw name="Fechar o navegador" type="TEARDOWN">
-<msg time="2025-04-09T19:29:13.037954" level="FAIL">No keyword with name 'Fechar o navegador' found.</msg>
-<status status="FAIL" start="2025-04-09T19:29:13.037648" elapsed="0.000655">No keyword with name 'Fechar o navegador' found.</status>
+<status status="PASS" start="2025-04-10T10:17:44.025083" elapsed="8.723575"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br">
+<msg time="2025-04-10T10:17:52.760525" level="FAIL">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</msg>
+<status status="FAIL" start="2025-04-10T10:17:52.760406" elapsed="0.000240">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</status>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;">
+<status status="NOT RUN" start="2025-04-10T10:17:52.771845" elapsed="0.000086"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;">
+<status status="NOT RUN" start="2025-04-10T10:17:52.772387" elapsed="0.000063"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;">
+<status status="NOT RUN" start="2025-04-10T10:17:52.772750" elapsed="0.000053"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;">
+<status status="NOT RUN" start="2025-04-10T10:17:52.773089" elapsed="0.000059"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-10T10:17:52.790799" elapsed="3.498253"/>
+</kw>
+<status status="PASS" start="2025-04-10T10:17:52.790180" elapsed="3.499070"/>
 </kw>
 <doc>Esse teste verifica o menu Eletrônicos do site da amazon.com.br
 e everifica a categoria Computadores e Informática</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" start="2025-04-09T19:29:13.026255" elapsed="0.016219">Setup failed:
-No keyword with name 'Abrir o navegador' found.
-
-Also teardown failed:
-No keyword with name 'Fechar o navegador' found.</status>
+<status status="FAIL" start="2025-04-10T10:17:44.023958" elapsed="12.265572">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</status>
+</test>
+<test id="s1-t2" name="Caso de Teste 02 - Pesquisa de um produto" line="20">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-10T10:17:56.291673" level="INFO">Opening browser 'firefox' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>https://www.amazon.com.br/</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-10T10:17:56.291480" elapsed="9.363818"/>
+</kw>
+<status status="PASS" start="2025-04-10T10:17:56.291148" elapsed="9.364339"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br">
+<msg time="2025-04-10T10:18:05.669974" level="FAIL">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</msg>
+<status status="FAIL" start="2025-04-10T10:18:05.669746" elapsed="0.000334">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</status>
+</kw>
+<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa">
+<status status="NOT RUN" start="2025-04-10T10:18:05.674601" elapsed="0.000095"/>
+</kw>
+<kw name="Clicar no botão de pesquisa">
+<status status="NOT RUN" start="2025-04-10T10:18:05.677925" elapsed="0.000082"/>
+</kw>
+<kw name="Verificar o resultado da pesquisa se está listando o produto pesquisado">
+<status status="NOT RUN" start="2025-04-10T10:18:05.689127" elapsed="0.000085"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-10T10:18:05.691767" elapsed="4.042546"/>
+</kw>
+<status status="PASS" start="2025-04-10T10:18:05.691184" elapsed="4.043271"/>
+</kw>
+<doc>Esse teste verifica a busca de um produto</doc>
+<tag>Busca_produtos</tag>
+<tag>lista_busca</tag>
+<status status="FAIL" start="2025-04-10T10:17:56.290542" elapsed="13.444132">No keyword with name 'Acessar a home page do site Amazon.com.br' found.</status>
 </test>
 <doc>Essa suite teste o site da amazon.com.Busca_produtos</doc>
-<status status="FAIL" start="2025-04-09T19:29:12.955176" elapsed="0.095208"/>
+<status status="FAIL" start="2025-04-10T10:17:43.649139" elapsed="26.086732"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">Busca_produtos</stat>
 <stat pass="0" fail="1" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">lista_busca</stat>
 <stat pass="0" fail="1" skip="0">menus</stat>
 </tag>
 <suite>
-<stat name="Amazon Testes" id="s1" pass="0" fail="1" skip="0">Amazon Testes</stat>
+<stat name="Amazon Testes" id="s1" pass="0" fail="2" skip="0">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>
