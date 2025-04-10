@@ -6,6 +6,8 @@ ${URL}                                 https://www.amazon.com.br/
 ${MENU_ELETRONICOS}                    //a[normalize-space()='Eletrônicos']
 ${HEADER_ELETRONICOS_E_TECNOLOGIA}     (//span[contains(text(),'Eletrônicos e Tecnologia')])[1]
 ${TEXTO_HEADER_ELETRONICOS}            Eletrônicos e Tecnologia   
+${CAMPO_PESQUISA}                      twotabsearchtextbox
+${BOTAO_PESQUISA}                      nav-search-submit-button
 
 *** Keywords ***
 Abrir o navegador
@@ -13,6 +15,7 @@ Abrir o navegador
     Maximize Browser Window
 
 Fechar o navegador 
+    Capture Page Screenshot
     Close Browser         
 
 
@@ -32,3 +35,15 @@ Verificar se o título da página fica "${TITULO}"
 
 Verificar se aparece a categoria "${NOME_CATEGORIA}"
     Element Should Be Visible   //span[@class='a-size-base-plus'][normalize-space()='${NOME_CATEGORIA}']
+
+Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+    Input Text    ${CAMPO_PESQUISA}    ${PRODUTO}
+
+Clicar no botão de pesquisa
+    Click Element    ${BOTAO_PESQUISA}
+
+Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
+    Wait Until Element Is Visible    //span[normalize-space()=${PRODUTO}]
+
+    
+    
