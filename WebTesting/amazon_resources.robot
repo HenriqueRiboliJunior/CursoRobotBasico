@@ -5,5 +5,5 @@ Library     SeleniumLibrary
 Abrir o navegador
     Open Browser    https://www.amazon.com.br/    firefox  
 
-Fechar o navegador
+Fechar o navegador 
     Close Browser         
