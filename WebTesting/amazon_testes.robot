@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Essa suite teste o site da amazon.com.Busca_produtos
+Resource         amazon_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
