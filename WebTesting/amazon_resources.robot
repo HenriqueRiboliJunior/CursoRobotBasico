@@ -8,6 +8,11 @@ ${HEADER_ELETRONICOS_E_TECNOLOGIA}     (//span[contains(text(),'Eletrônicos e T
 ${TEXTO_HEADER_ELETRONICOS}            Eletrônicos e Tecnologia   
 ${CAMPO_PESQUISA}                      twotabsearchtextbox
 ${BOTAO_PESQUISA}                      nav-search-submit-button
+${PRODUTO_XBOX}                        (//span[contains(text(),'Microsoft Xbox Series S 512 GB All-Digital Console')])[1]
+${ADICIONAR_CARRINHO}                  add-to-cart-button
+${GARANTIA_EXTENDIDA_NAO}              (//input[@aria-labelledby='attachSiNoCoverage-announce'])[1]
+${TITULO_GARANTIA_EXTENDIDA}           (//span[@id='attach-warranty-displayTitle'])[1]
+${ADICIONADO_AO_CARRINHO}              //h1[normalize-space()='Adicionado ao carrinho']
 
 *** Keywords ***
 Abrir o navegador
@@ -45,6 +50,21 @@ Clicar no botão de pesquisa
 Verificar o resultado da pesquisa se está listando o produto ${PRODUTO}
     Wait Until Element Is Visible    //span[normalize-space()=${PRODUTO}]
 
+Adicionar o produto "Console Xbox Series S" no carrinho
+    Wait Until Element Is Visible   ${PRODUTO_XBOX}
+    Click Element                   ${PRODUTO_XBOX} 
+    Wait Until Element Is Visible   ${ADICIONAR_CARRINHO}
+    Click Button                    ${ADICIONAR_CARRINHO}
+
+
+Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+    Wait Until Element Is Visible       ${ADICIONADO_AO_CARRINHO}
+    Element Should Be Visible           ${ADICIONADO_AO_CARRINHO}
+
+Remover o produto "Console Xbox Series S" do carrinho
+   
+Verificar se o carrinho fica vazio
+
     
 #GHERKIN
 
@@ -74,3 +94,4 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se está listando o produto "Console Xbox Series S"
+
