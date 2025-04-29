@@ -62,10 +62,14 @@ Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
     Element Should Be Visible           ${ADICIONADO_AO_CARRINHO}
 
 Remover o produto "Console Xbox Series S" do carrinho
-   
+    Click Link   //a[@href='/cart?ref_=sw_gtc']
+    Wait Until Element Is Visible    a-icon a-icon-small-trash
+    Click Button    a-icon a-icon-small-trash
 Verificar se o carrinho fica vazio
+    Wait Until Element Is Visible    //span[@class='a-size-base sc-list-item-removed-msg-text-delete']
+    Element Should Be Visible        //span[@class='a-size-base sc-list-item-removed-msg-text-delete']
 
-    
+
 #GHERKIN
 
 Dado que estou na home page da Amazon.com.br
@@ -95,3 +99,14 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se está listando o produto "Console Xbox Series S"
 
+
+E Adiciono o produto no carrinho 
+    Adicionar o produto "Console Xbox Series S" no carrinho
+E Verifico se o produto foi adicionado no carrinho
+    Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+
+E Removo o produto do carrinho
+    Remover o produto "Console Xbox Series S" do carrinho
+
+E Verifico se o produto foi removido
+    Verificar se o carrinho fica vazio
