@@ -21,7 +21,7 @@ jobs:
       # Passo 1: Faz o checkout do código do seu repositório
       # Isso permite que o workflow acesse seus arquivos de teste
       - name: Checkout do Código
-        uses: actions/checkout@v3 # Usa a ação oficial do GitHub para checkout
+        uses: actions/checkout@v4 # Usa a ação oficial do GitHub para checkout
 
       # Passo 2: Configura o ambiente Python
       # O Robot Framework é baseado em Python, então precisamos garantir que o Python esteja disponível
@@ -61,7 +61,7 @@ jobs:
       # Passo 6 (Opcional): Upload dos resultados dos testes como artefatos
       # Isso permite que você baixe os logs, relatórios e screenshots gerados pelos testes
       - name: Upload de Resultados dos Testes
-        uses: actions/upload-artifact@v3 # Usa a ação oficial para upload de artefatos
+        uses: actions/upload-artifact@v4 # Usa a ação oficial para upload de artefatos
         if: always() # Garante que este passo sempre seja executado, mesmo se os testes falharem
         with:
           name: resultados-robot-framework # Nome do artefato
