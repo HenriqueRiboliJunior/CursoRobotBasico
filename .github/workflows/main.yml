@@ -56,7 +56,7 @@ jobs:
         # A flag '--outputdir' especifica onde os relatórios serão salvos
         # A flag '--variable BROWSER:Chrome' pode ser usada para definir o navegador via linha de comando
         run: |
-          robot --outputdir ./results caminho/para/seus/testes/seu_suite_de_testes.robot
+          robot --outputdir ./results https://github.com/HenriqueRiboliJunior/resultado_testes.git
 
       # Passo 6 (Opcional): Upload dos resultados dos testes como artefatos
       # Isso permite que você baixe os logs, relatórios e screenshots gerados pelos testes
