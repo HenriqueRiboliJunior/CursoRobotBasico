@@ -28,7 +28,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v4 # Usa a ação oficial para configurar o Python
         with:
-          python-version: '3.x' # Define a versão do Python a ser usada (ex: '3.9', '3.10', '3.x' para a última 3)
+          python-version: '3.13.3' # Define a versão do Python a ser usada (ex: '3.9', '3.10', '3.x' para a última 3)
 
       # Passo 3: Instala o Robot Framework e as bibliotecas necessárias
       # 'robotframework-seleniumlibrary' é comum para testes web
